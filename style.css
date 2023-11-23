@@ -1,0 +1,105 @@
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Quicksand, system-ui, sans-serif;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+}
+
+.sign-up {
+  padding: 3rem 2rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12rem 0 7.5rem 0;
+  min-width: 40%;
+  background-image: url("images/picture.jpg");
+  background-size: cover;
+}
+
+.logo > main {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  height: 10rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #f8f8f2;
+}
+
+.logo > footer {
+  text-align: center;
+  color: #ffddff;
+}
+
+.sign-up {
+  min-width: 60%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+form {
+  margin: 2rem auto;
+}
+
+.form-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+div > label, div > input {
+  display: block;
+  min-width: 20rem;
+  font-size: 1.1rem;
+}
+
+div > input {
+  height: 2.8rem;
+  padding: 0.2rem;
+  border: none;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+div > label {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bottom-controls {
+  margin-top: 3rem;
+  line-height: 3rem;
+}
+
+button {
+  width: 14.5rem;
+  padding: 0.8rem 1.5em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #610C9F;
+  color: #ffddff;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+a {
+  font-weight: bold;
+  color: #610c9f;
+  text-decoration: none;
+}
