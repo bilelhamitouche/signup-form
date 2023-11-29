@@ -1,105 +1,114 @@
 
-*, ::before, ::after {
+*, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Quicksand, system-ui, sans-serif;
+  font-family: Fira Sans, system-ui, sans-serif;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   height: 100%;
-  overflow: hidden;
-}
-
-.container {
-  display: flex;
-}
-
-.sign-up {
-  padding: 3rem 2rem;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 12rem 0 7.5rem 0;
-  min-width: 40%;
+  padding: 2rem;
   background-image: url("images/picture.jpg");
   background-size: cover;
 }
 
-.logo > main {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  height: 10rem;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #f8f8f2;
-}
-
-.logo > footer {
-  text-align: center;
-  color: #ffddff;
-}
-
-.sign-up {
-  min-width: 60%;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  margin: 3rem auto;
+  height: 80%;
+  width: 60%;
+  background-color: #000000;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 5px #333333;
 }
 
 h1 {
-  font-size: 3rem;
+  text-align: center;
+  color: #00aaff;
 }
 
 form {
-  margin: 2rem auto;
-}
-
-.form-controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  justify-content: center;
+  gap: 1rem;
 }
 
-div > label, div > input {
-  display: block;
+label {
   min-width: 20rem;
-  font-size: 1.1rem;
 }
 
-div > input {
-  height: 2.8rem;
-  padding: 0.2rem;
+input {
+  appearance: none;
+  display: block;
+  min-width: 19rem;
   border: none;
-  border: 1px solid black;
-  border-radius: 0.5rem;
-  margin-top: 0.3rem;
+  border: 1px solid white;
+  background-color: #080808;
+  color: white;
+  border-radius: 0.2rem;
+  height: 1.8rem;
+  margin-top: 0.5rem;
+  padding-left: 0.2rem;
 }
 
-div > label {
-  text-transform: uppercase;
-  font-weight: bold;
+input:invalid {
+  border-color: #ff2255;
 }
 
-.bottom-controls {
-  margin-top: 3rem;
-  line-height: 3rem;
+input:focus:invalid, input:focus:valid {
+  outline: none;
+}
+
+input:empty {
+  border: none;
+  border: 1px solid white;
+}
+
+input:focus {
+  border: none;
+  border: 1px solid #11a1ff;
+  color: white;
+}
+
+input::placeholder {
+  color: #999999;
+}
+
+label > span {
+  color: #dddddd;
+}
+
+.submit {
+  margin-left: 0.7rem;
 }
 
 button {
-  width: 14.5rem;
-  padding: 0.8rem 1.5em;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #610C9F;
-  color: #ffddff;
+  color: #010101;
+  background-color: #00aaff;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.7rem;
+  margin-bottom: 0.2rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 5px;
 }
 
-a {
-  font-weight: bold;
-  color: #610c9f;
-  text-decoration: none;
+p {
+  color: #dddddd;
+}
+
+.error {
+  position: absolute;
+  width: 100%;
+  padding-top: 0.2rem;
+  font-size: 80%;
+  color: #900;
 }

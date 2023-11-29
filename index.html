@@ -4,54 +4,47 @@
     <meta charset="UTF-8"/>
     <title>Sign-up Form</title>
     <link href="style.css" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <div class="logo">
-	<main>Welcome to our E-Learning platform</main>
-	<footer>
-	  Copyright &copy Bilel Hamitouche
-	</footer>
-      </div>
-      <div class="sign-up">
-	<h1>Let's do this!</h1>
-	Required fields have an asterix (*) infront of them.
-	<form method="post">
-	  <div class="form-controls">
-	    <div class="item">
-              <label for="first">First Name <span aria-label="required">*</span></label>
-              <input name="first_name" type="text" value="" id="first" placeholder="John"/>
-	    </div>
-	    <div class="item">
-              <label for="last">Last Name <span aria-label="required">*</span></label>
-              <input name="last_name" type="text" value="" id="last" placeholder="Smith"/>
-	    </div>
-	    <div class="item">
-              <label for="mail">Email <span aria-label="required">*</span></label>
-              <input name="email" type="email" value="" id="mail" placeholder="username@example.com"/>
-	    </div>
-	    <div class="item">
-              <label for="tel">Phone Number </label>
-              <input name="phone" type="tel" value="" id="tel" placeholder="0556981245"/>
-	    </div>
-	    <div class="item">
-              <label for="pass">Password <span aria-label="required">*</span></label>
-              <input name="password_confirm" type="text" value="" id="pass" placeholder="Password123"/>
-	    </div>
-	    <div class="item">
-              <label for="confirm_pass">Confirm Password <span aria-label="required">*</span></label>
-              <input name="password_confirm" type="text" value="" id="confirm_pass" placeholder="Password123"/>
-	    </div>
-	  </div>
-	  <div class="bottom-controls">
-	    <button>Create account</button>
-	    <p>Already have an account? <a href="#">Log in</a></p>
-	  </div>
-	</form>
-      </div>
+      <h1>Sign up now!</h1>
+      <form id="myForm" method="post" novalidate>
+	<label for="first_name">
+          <span>First Name: </span>
+          <input name="first_name" type="text" value="" id="first_name" placeholder="John" required />
+          <span class="error" aria-label="polite"></span>
+	</label>
+	<label for="last_name">
+          <span>Last Name: </span>
+          <input name="last_name" type="text" value="" id="last_name" placeholder="Smith" required />
+          <span class="error" aria-label="polite"></span>
+	</label>
+	<label for="email">
+          <span>Email: </span>
+          <input name="email" type="email" value="" id="email" placeholder="username@gmail.com" required />
+          <span class="error" aria-label="polite"></span>
+	</label>
+	<label for="phone">
+          <span>Phone: </span>
+          <input name="phone" type="tel" value="" id="phone" placeholder="0556986532"/>
+          <span class="error" aria-label="polite"></span>
+	</label>
+	<label for="pass">
+          <span>Password: </span>
+          <input name="pass" type="password" value="" id="pass" placeholder="Password123" minlength="8" required />
+          <span class="error" aria-label="polite"></span>
+	</label>
+	<label for="confirm_pass">
+          <span>Confirm Password: </span>
+          <input name="confirm_pass" type="password" value="" id="confirm_pass" placeholder="Password123" minlength="8" required />
+          <span class="error" aria-label="polite"></span>
+	</label>
+      </form>
+     <div class="submit">
+       <button form="myForm">Create Account</button>
+       <p>Already have an account? <a href="">Log In</a> </p>
+     </div>
     </div>
   </body>
 </html>
