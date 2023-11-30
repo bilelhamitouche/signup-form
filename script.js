@@ -19,6 +19,7 @@ form.addEventListener("submit", (event) => {
     showPassError();
     showConfirmPassError();
     event.preventDefault();
+    passwordMatch();
   }
 });
 
@@ -59,6 +60,7 @@ pass.addEventListener("input", (event) => {
 });
 
 confirmPass.addEventListener("input", (event) => {
+  passwordMatch();
   if (confirmPass.validity.valid) {
     confirmPassError.textContent = ""; 
     confirmPassError.className = "error"; 
@@ -110,4 +112,11 @@ function showConfirmPassError() {
     confirmPassError.textContent = "Password must be at least 8 characters";
   } 
   passError.className = "error";
+}
+
+function passwordMatch() {
+  if (pass.value != confirmPass.value) {
+    confirmPassError.textContent = "Passwords do not match";
+    confirmPassError.className = "error";
+  }
 }
